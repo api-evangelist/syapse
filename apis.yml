@@ -15,6 +15,9 @@ description: >-
   public API, OpenAPI/AsyncAPI/GraphQL contract, SDK or developer portal survives.
 image: https://avatars.githubusercontent.com/u/1268822?v=4
 url: https://raw.githubusercontent.com/api-evangelist/syapse/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Syapse never published a public developer program, and no public API, OpenAPI/AsyncAPI/GraphQL contract, SDK or developer portal survives."
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
