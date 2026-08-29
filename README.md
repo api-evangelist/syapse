@@ -64,5 +64,24 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Syapse is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/syapse_stock/
+Syapse was a San Francisco precision-medicine software company (founded 2008) that built a
+real-world evidence platform for community oncology — integrating structured clinical data from
+health-system EHRs with genomic/NGS results for molecular tumor boards, care coordination, quality
+improvement and life-sciences research — and ran the Syapse Learning Health Network alongside
+collaborations with Roche, Amgen and the US Department of Veterans Affairs.
+
+**Syapse Holdings was acquired by N-Power Medicine** in a stock-for-stock exchange that closed
+2024-12-30 and was announced 2025-01-12. The brand has since been fully retired: `syapse.com`
+serves nothing but a 292-byte meta-refresh stub pointing at `npowermedicine.com`
+(Last-Modified 2025-01-12), and every path on that host — including invented ones — returns the
+same stub.
+
+Syapse never published a public developer program. No OpenAPI, AsyncAPI, GraphQL SDL, MCP server,
+agent card, SDK or developer portal was found on any Syapse host, on any public package registry,
+or in the company's verified GitHub organisation (all 18 public repositories there are forks of
+third-party projects, 17 of them archived). What this repository records is the probe evidence for
+that absence, not a scaffold of an API that does not exist.
+
+- Website: https://syapse.com/ (redirect stub)
+- Acquirer: https://www.npowermedicine.com/
+- GitHub: https://github.com/syapse

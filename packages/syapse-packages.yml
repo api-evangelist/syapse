@@ -1,0 +1,89 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org, rubygems.org, crates.io, api.nuget.org (azuresearch-usnc),
+  and https://api.github.com/orgs/syapse/repos
+package_count: 0
+official_package_count: 0
+packages: []
+note: >-
+  Syapse publishes no first-party client library on any public registry. Every candidate name
+  was probed directly against the registry metadata endpoint and returned 404 (crates.io
+  returned 403 to an unauthenticated probe and is recorded as unresolved rather than absent).
+  The company's verified GitHub organisation (github.com/syapse, 18 public repositories, org
+  description "The Precision Medicine Data Platform") contains NO first-party code: all 18
+  repositories are FORKS of third-party projects — blazegraph, d2rq, pymantic, paramiko,
+  pysftp, django-storages, okta-sdk-python, cookiecutter-pypackage, Jenkins plugins and
+  similar infrastructure. 17 of the 18 are archived; the only repository pushed since 2020 is
+  a fork of flask-jwt-consumer (2025-06-20). There is therefore no SDK to point at and NO
+  `SDKs` pointer is emitted in apis.yml.
+registry_probes:
+- registry: pypi
+  name: syapse
+  url: https://pypi.org/pypi/syapse/json
+  status: 404
+  version: null
+  published: null
+- registry: pypi
+  name: syapse-client
+  url: https://pypi.org/pypi/syapse-client/json
+  status: 404
+  version: null
+  published: null
+- registry: pypi
+  name: pysyapse
+  url: https://pypi.org/pypi/pysyapse/json
+  status: 404
+  version: null
+  published: null
+- registry: pypi
+  name: syapse-sdk
+  url: https://pypi.org/pypi/syapse-sdk/json
+  status: 404
+  version: null
+  published: null
+- registry: npm
+  name: syapse
+  url: https://registry.npmjs.org/syapse
+  status: 404
+  version: null
+  published: null
+- registry: npm
+  name: "@syapse/sdk"
+  url: https://registry.npmjs.org/@syapse%2fsdk
+  status: 404
+  version: null
+  published: null
+- registry: npm
+  name: syapse-client
+  url: https://registry.npmjs.org/syapse-client
+  status: 404
+  version: null
+  published: null
+- registry: rubygems
+  name: syapse
+  url: https://rubygems.org/api/v1/gems/syapse.json
+  status: 404
+  version: null
+  published: null
+- registry: crates.io
+  name: syapse
+  url: https://crates.io/api/v1/crates/syapse
+  status: 403
+  version: null
+  published: null
+  note: crates.io refused the unauthenticated probe; recorded as unresolved, not as absent.
+- registry: nuget
+  name: syapse
+  url: https://azuresearch-usnc.nuget.org/query?q=syapse
+  status: 200
+  version: null
+  published: null
+  note: query succeeded and returned totalHits 0 — no package.
+third_party_only:
+- name: StanfordBioinformatics/syapse_scgpm
+  url: https://github.com/StanfordBioinformatics/syapse_scgpm
+  official: false
+  note: >-
+    Third-party utilities written by Stanford Bioinformatics for the Syapse–SCGPM collaboration,
+    last pushed 2016-10-28. Not published by Syapse and not a client library for a public API.

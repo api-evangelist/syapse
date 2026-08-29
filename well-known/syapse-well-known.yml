@@ -1,0 +1,138 @@
+generated: '2026-08-29'
+method: probed
+source: https://syapse.com/ (and https://www.syapse.com/)
+summary: >-
+  Zero well-known documents. Both Syapse hosts are a catch-all: every path — real or invented —
+  answers HTTP 200 with the identical 292-byte HTML stub whose only content is a
+  meta-refresh to https://www.npowermedicine.com/ (Last-Modified 2025-01-12, served from S3
+  behind CloudFront). No document was fetched or saved, so NO WellKnown / SecurityTxt /
+  AgentCard pointer is emitted in apis.yml. A 200 here is not a hit.
+hit_count: 0
+soft_404_control:
+  url: https://syapse.com/this-path-does-not-exist-9f3a
+  status: 200
+  bytes: 292
+  content_type: text/html
+  note: >-
+    An invented path returns byte-identical content to every probed path, which is what
+    establishes that all 200s below are catch-all responses, not served documents.
+hosts:
+- host: https://syapse.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub, not a security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub — rejected as an agent card (HTML, not JSON)
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub — rejected as an agent card (HTML, not JSON)
+- host: https://www.syapse.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: catch-all 292-byte redirect stub
+contract_discovery:
+  note: >-
+    STEP 0b contract-discovery probes, recorded here because the repo has no openapi/ to hang
+    them on. Every one is the same catch-all 200; none parses as a contract.
+  probes:
+  - url: https://syapse.com/openapi.json
+    status: 200
+    result: HTML redirect stub, not OpenAPI
+  - url: https://syapse.com/swagger.json
+    status: 200
+    result: HTML redirect stub, not OpenAPI
+  - url: https://syapse.com/llms.txt
+    status: 200
+    result: HTML redirect stub, not llms.txt
+  - url: https://www.syapse.com/openapi.json
+    status: 200
+    result: HTML redirect stub, not OpenAPI
+  - url: https://api.syapse.com/
+    status: null
+    result: NXDOMAIN — host does not resolve
+  - url: https://developers.syapse.com/
+    status: null
+    result: NXDOMAIN — host does not resolve
+  - url: https://docs.syapse.com/
+    status: null
+    result: TLS connection failed — host does not serve
+  dns:
+    resolves: [www.syapse.com]
+    nxdomain: [api.syapse.com, app.syapse.com, portal.syapse.com, status.syapse.com, trust.syapse.com, learn.syapse.com, blog.syapse.com]
+successor_host_probes:
+  note: >-
+    N-Power Medicine is the acquirer, not Syapse. Probed only to confirm the retired surface did
+    not reappear under the new brand. These are real 404s (not a catch-all), and they belong to
+    N-Power Medicine, not to this profile.
+  probes:
+  - url: https://www.npowermedicine.com/
+    status: 200
+  - url: https://www.npowermedicine.com/llms.txt
+    status: 404
+  - url: https://www.npowermedicine.com/robots.txt
+    status: 404
+  - url: https://www.npowermedicine.com/.well-known/security.txt
+    status: 404
+  - url: https://www.npowermedicine.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.npowermedicine.com/.well-known/agent.json
+    status: 404
+  - url: https://www.npowermedicine.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.npowermedicine.com/openapi.json
+    status: 404
