@@ -13,6 +13,18 @@ description: >-
   fully retired: syapse.com now serves nothing but a 292-byte meta-refresh stub redirecting to
   npowermedicine.com, dated 2025-01-12. Syapse never published a public developer program, and no
   public API, OpenAPI/AsyncAPI/GraphQL contract, SDK or developer portal survives.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://avatars.githubusercontent.com/u/1268822?v=4
 url: https://raw.githubusercontent.com/api-evangelist/syapse/refs/heads/main/apis.yml
 x-api-posture: no-product-api
